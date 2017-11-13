@@ -1,0 +1,9 @@
+{
+  "name": "lequal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Luchanso/lequal.git",
+  "author": "Luchanso <luchansodev@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

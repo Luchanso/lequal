@@ -4,26 +4,26 @@ Without dependencies
 
 install:
 ```
-npm install lequeal
-# or: yarn add lequeal
+npm install lequal
+# or: yarn add lequal
 ```
 
 usage:
 ```
-const lequeal = require('lequeal');
-// or: import lequeal from 'lequeal';
+const lequal = require('lequal');
+// or: import lequeal from 'lequal';
 
 const a = { c: 123 };
 const b = { c: 123 };
 
-lequeal(a, b); // true
-lequeal({ c: 321 }, b); // false
+lequal(a, b); // true
+lequal({ c: 321 }, b); // false
 
 const nestedObj1 = { a: { b: 123 } }
 const nestedObj2 = { a: { b: 321 } }
 
 const isDeepEqual = true;
 
-lequeal(nestedObj1, nestedObj2, isDeepEqual); // true
+lequal(nestedObj1, nestedObj2, isDeepEqual); // true
 
 ```

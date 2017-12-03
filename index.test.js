@@ -56,14 +56,26 @@ it('check difference nested object', () => {
   expect(lequal(c, d)).toBeFalsy();
 });
 
+it('check arrays', () => {
+  const a = [1, 2, 3];
+  const b = [1, 2, 3];
 
-// lequal(a, b); // true
-// lequal({ c: 321 }, b); // false
+  const c = [1, 2, 3, 4];
+  const d = [1, 2, 3];
 
-// const nestedObj1 = { a: { b: 123 } }
-// const nestedObj2 = { a: { b: 321 } }
+  expect(lequal(a, b)).toBeTruthy();
+  expect(lequal(c, d)).toBeFalsy();
+});
 
-// const isDeepEqual = true;
+it('check difference prototypes', () => {
+  const A = function() { };
+  const B = function() { };
 
-// lequal(nestedObj1, nestedObj2, isDeepEqual); // true
+  const c = new A();
+  const d = new B();
+
+  c.prototype = () => {};
+
+  expect(lequal(c, d)).toBeFalsy();
+});
 
